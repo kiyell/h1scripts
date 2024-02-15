@@ -2,6 +2,8 @@
 timemark=`date +"%d-%b-%Y_%H%M_%S"`
 script_name=$(basename -- "$0")
 
+mkdir -p archive
+
 if pidof -x "$script_name" -o $$ >/dev/null;then
    echo "DUPLICATE instance of script already running - exiting..."
    exit 1
